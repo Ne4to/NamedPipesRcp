@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Concurrent;
+using System.IO.Pipes;
 using System.Threading;
 
 namespace NamedPipesRcp
@@ -10,6 +11,7 @@ namespace NamedPipesRcp
 
 		private readonly string _pipeName;
 		private readonly IPipeMessageSerializer _serializer;
+		private readonly PipeSecurity _pipeSecurity;
 		private readonly CancellationTokenSource _cancellationTokenSource = new CancellationTokenSource();
 
 		private readonly ConcurrentDictionary<string, Func<byte[], byte[]>> _messageFuncs = new ConcurrentDictionary<string, Func<byte[], byte[]>>();
@@ -26,20 +28,21 @@ namespace NamedPipesRcp
 
 		#endregion
 		
-		public PipeServer(string pipeName, IPipeMessageSerializer serializer)
+		public PipeServer(string pipeName, IPipeMessageSerializer serializer, PipeSecurity pipeSecurity = null)
 		{
 			if (pipeName == null) throw new ArgumentNullException("pipeName");
 			if (serializer == null) throw new ArgumentNullException("serializer");
 			
 			_pipeName = pipeName;
 			_serializer = serializer;
+			_pipeSecurity = pipeSecurity;
 		}
 
 		public async void Start()
 		{
 			while (!_cancellationTokenSource.Token.IsCancellationRequested)
 			{
-				var worker = new PipeServerWorker(_pipeName, _messageFuncs, _cancellationTokenSource.Token);
+				var worker = new PipeServerWorker(_pipeName, _pipeSecurity, _messageFuncs, _cancellationTokenSource.Token);
 
 				if (await worker.RunAsync())
 				{
@@ -49,6 +52,7 @@ namespace NamedPipesRcp
 				else
 				{
 					worker.Dispose();
+					break;
 				}
 			}
 		}
