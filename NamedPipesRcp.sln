@@ -1,0 +1,53 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NamedPipesRcp", "NamedPipesRcp\NamedPipesRcp.csproj", "{54FC7563-3D28-4E79-A88E-0B2E78301F3E}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demos", "Demos", "{FB927A5D-EF55-4BCB-9CB7-40CD422ACBBE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoServer", "DemoServer\DemoServer.csproj", "{7BBF517D-DB1B-4348-B64C-9D304006EB94}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoClient", "DemoClient\DemoClient.csproj", "{AF937270-44FC-403A-AF76-E8C599014502}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DemoStressClient", "DemoStressClient\DemoStressClient.csproj", "{B064F189-F139-4426-BCB3-1BF7029BC7FD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NamedPipesRcp.MessagePack", "NamedPipesRcp.MessagePack\NamedPipesRcp.MessagePack.csproj", "{4A3607E2-F982-4EDE-86C5-B4591F4B51A9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{54FC7563-3D28-4E79-A88E-0B2E78301F3E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54FC7563-3D28-4E79-A88E-0B2E78301F3E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54FC7563-3D28-4E79-A88E-0B2E78301F3E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54FC7563-3D28-4E79-A88E-0B2E78301F3E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7BBF517D-DB1B-4348-B64C-9D304006EB94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BBF517D-DB1B-4348-B64C-9D304006EB94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7BBF517D-DB1B-4348-B64C-9D304006EB94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7BBF517D-DB1B-4348-B64C-9D304006EB94}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF937270-44FC-403A-AF76-E8C599014502}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF937270-44FC-403A-AF76-E8C599014502}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF937270-44FC-403A-AF76-E8C599014502}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF937270-44FC-403A-AF76-E8C599014502}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B064F189-F139-4426-BCB3-1BF7029BC7FD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B064F189-F139-4426-BCB3-1BF7029BC7FD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B064F189-F139-4426-BCB3-1BF7029BC7FD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B064F189-F139-4426-BCB3-1BF7029BC7FD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4A3607E2-F982-4EDE-86C5-B4591F4B51A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4A3607E2-F982-4EDE-86C5-B4591F4B51A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4A3607E2-F982-4EDE-86C5-B4591F4B51A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4A3607E2-F982-4EDE-86C5-B4591F4B51A9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7BBF517D-DB1B-4348-B64C-9D304006EB94} = {FB927A5D-EF55-4BCB-9CB7-40CD422ACBBE}
+		{AF937270-44FC-403A-AF76-E8C599014502} = {FB927A5D-EF55-4BCB-9CB7-40CD422ACBBE}
+		{B064F189-F139-4426-BCB3-1BF7029BC7FD} = {FB927A5D-EF55-4BCB-9CB7-40CD422ACBBE}
+	EndGlobalSection
+EndGlobal
